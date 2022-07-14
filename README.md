@@ -12,6 +12,11 @@
         src="http://img.shields.io/badge/-Velog-white?style=flat&logo=Velog&logoColor=white&color=20C997&link=https://velog.io/@fltxld3"
         style="height : auto; margin-left : 10px; margin-right : 10px;"/>
 </a>
+<a href="https://i-do-love-me.tistory.com/">
+    <img 
+        src="http://img.shields.io/badge/-Tistory-white?style=flat&logo=Tistory&logoColor=white&color=000000&link=https://i-do-love-me.tistory.com"
+        style="height : auto; margin-left : 10px; margin-right : 10px;"/>
+</a>
 
 <hr />
   
