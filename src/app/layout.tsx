@@ -1,10 +1,13 @@
 'use client';
 import { useEffect } from 'react';
-import type { Metadata } from 'next';
 import './globals.css';
 import GlobalStyle from './styles/global-styles';
+import Header from './_components/header';
+import useHasMounted from '../useHasMounted';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const hasMounted = useHasMounted();
+
   useEffect(() => {
     // Client-only logic here if needed
     console.log('Client-side logic executed');
@@ -13,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <GlobalStyle />
-      {/* You can include common UI elements (header, etc.) here */}
+      {hasMounted && <Header />}
       <body>{children}</body>
     </html>
   );
