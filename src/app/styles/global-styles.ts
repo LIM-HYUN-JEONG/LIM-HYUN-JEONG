@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
       padding: 0;
       border: 0;
       vertical-align: baseline;
+      background-color: #252525;
   }
 
   body{
