@@ -32,12 +32,11 @@ const About: React.FC<AboutProps> = () => {
 };
 
 const StyledSkills = styled.main`
-  vscode-file://vscode-app/c:/Users/82103/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html
-    section {
+  section {
     max-width: 1140px;
     margin: auto;
     padding-bottom: 80px;
-    &:not(:last-child) {
+    & :not(:last-child) {
       position: relative;
       margin-bottom: 60px;
       &::after {
