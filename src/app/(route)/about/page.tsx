@@ -1,4 +1,5 @@
 // `app/about/page.tsx` is the UI for the `/about` URL
+'use client';
 import React from 'react';
 import { Suspense } from 'react';
 import About from './_components/about';

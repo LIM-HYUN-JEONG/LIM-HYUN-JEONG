@@ -1,4 +1,4 @@
-import styles from './styles/page.module.css';
+'use client';
 
 // `app/projects/page.tsx` is the UI for the `/projects` URL
 export default function Page() {
