@@ -1,7 +1,7 @@
 import React from 'react';
-import data from '../../assets/data/skilldata';
+import data from '../../../assets/data/skilldata';
 import styled from 'styled-components';
-import Heading from '@/src/utils/heading';
+import Heading from '../../../../utils/heading';
 
 export default function ExperienceWrap() {
   const experienceList = data.experienceList.map((list, idx) => (

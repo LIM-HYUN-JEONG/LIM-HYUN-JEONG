@@ -1,5 +1,5 @@
 import React from 'react';
-import data from '../../assets/data/skilldata';
+import data from '../../../assets/data/skilldata';
 import styled from 'styled-components';
 import Heading from '@/src/utils/heading';
 

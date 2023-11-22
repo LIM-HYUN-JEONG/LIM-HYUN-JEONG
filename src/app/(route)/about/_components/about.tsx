@@ -2,10 +2,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Heading from '@/src/utils/heading';
+import Heading from '../../../../utils/heading';
 import SkillsWrap from './skillsWrap';
 import ExperienceWrap from './experienceWrap';
-import PageHeader from '../../_components/pageHeader';
+import PageHeader from '../../../_components/pageHeader';
 
 interface AboutProps {}
 
@@ -32,7 +32,8 @@ const About: React.FC<AboutProps> = () => {
 };
 
 const StyledSkills = styled.main`
-  section {
+  vscode-file://vscode-app/c:/Users/82103/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html
+    section {
     max-width: 1140px;
     margin: auto;
     padding-bottom: 80px;

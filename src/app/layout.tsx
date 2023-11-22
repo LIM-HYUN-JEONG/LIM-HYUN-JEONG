@@ -1,9 +1,12 @@
 'use client';
-import { useEffect } from 'react';
+
+import React, { useEffect } from 'react';
 import './globals.css';
 import GlobalStyle from './styles/global-styles';
 import Header from './_components/header';
 import useHasMounted from '../useHasMounted';
+import { ThemeProvider } from 'styled-components';
+import { theme } from './styles/theme';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const hasMounted = useHasMounted();
@@ -15,9 +18,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang="en">
-      <GlobalStyle />
-      {hasMounted && <Header />}
       <body>{children}</body>
+      {hasMounted && (
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <Header />
+        </ThemeProvider>
+      )}
     </html>
   );
 }
