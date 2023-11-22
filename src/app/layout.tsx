@@ -18,13 +18,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang="en">
-      <body>{children}</body>
       {hasMounted && (
         <ThemeProvider theme={theme}>
           <GlobalStyle />
           <Header />
         </ThemeProvider>
       )}
+      <body>{children}</body>
     </html>
   );
 }

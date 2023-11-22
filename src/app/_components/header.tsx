@@ -5,6 +5,39 @@ import React from 'react';
 import { MenuData } from '../assets/data/const';
 import styled from 'styled-components';
 
+export default function Header() {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        width: '100%',
+        height: '70px',
+        borderBottom: '1px solid #DBDBDB',
+      }}
+    >
+      <MenuBox>
+        {MenuData.map((menu) => {
+          return (
+            <MenuBtn key={menu.id} disableRipple sx={{ textTransform: 'none' }}>
+              <a
+                href={menu.path}
+                style={{
+                  color: menu.path === 'home' ? 'black' : '#C4C4C4',
+                }}
+              >
+                {menu.name}
+              </a>
+            </MenuBtn>
+          );
+        })}
+        <Github href="https://github.com/LIM-HYUN-JEONG" target="_blank" rel="noreferrer">
+          <i className="fab fa-github" style={{ fontSize: '1.5rem' }} />
+        </Github>
+      </MenuBox>
+    </div>
+  );
+}
 const MenuBox = MuiStyled(Box)(({ theme }) => ({
   display: 'flex',
   width: '100%',
@@ -40,37 +73,3 @@ const Github = styled.a`
     color: '#4B89DC';
   }
 `;
-
-export default function Header() {
-  return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        width: '100%',
-        height: '70px',
-        borderBottom: '1px solid #DBDBDB',
-      }}
-    >
-      <MenuBox>
-        {MenuData.map((menu) => {
-          return (
-            <MenuBtn key={menu.id} disableRipple sx={{ textTransform: 'none' }}>
-              <a
-                href={menu.path}
-                style={{
-                  color: menu.path === 'home' ? 'black' : '#C4C4C4',
-                }}
-              >
-                {menu.name}
-              </a>
-            </MenuBtn>
-          );
-        })}
-        <Github href="https://github.com/LIM-HYUN-JEONG" target="_blank" rel="noreferrer">
-          <i className="fab fa-github" style={{ fontSize: '1.5rem' }} />
-        </Github>
-      </MenuBox>
-    </div>
-  );
-}
