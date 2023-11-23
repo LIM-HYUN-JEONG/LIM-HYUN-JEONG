@@ -1,7 +1,7 @@
+'use client';
 import React from 'react';
 import styled from 'styled-components';
 import data from '../../assets/data/blogdata';
-import PageHeader from '../../_components/pageHeader';
 
 export default function BlogWrap() {
   const blogList = data.blogList.map((list, idx) => (

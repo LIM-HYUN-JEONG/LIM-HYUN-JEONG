@@ -1,10 +1,11 @@
-import Heading from '@/src/utils/heading';
+'use client';
 import React, { useState, useEffect } from 'react';
+import Heading from '@/src/utils/heading';
 import styled from 'styled-components';
 
 export default function PageHeader(props: any) {
-  const { children } = props;
   const [load, setLoad] = useState(false);
+  const { children } = props;
 
   useEffect(() => {
     setTimeout(() => {

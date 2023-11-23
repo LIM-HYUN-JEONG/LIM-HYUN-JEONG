@@ -11,15 +11,13 @@ export default function Page(match: any) {
   });
 
   return (
-    <div>
-      <main>
-        <PageHeader titleBg="Projrcts">
-          It&#39;s <span className="point">{match.params.name}</span>
-        </PageHeader>
-        <section>
-          <DetailWrap project={portfolioInfo[0]} />
-        </section>
-      </main>
-    </div>
+    <main>
+      <PageHeader titleBg="projects">
+        It&#39;s <span className="point">{match.params.name}</span>
+      </PageHeader>
+      <section>
+        <DetailWrap project={portfolioInfo[0]} />
+      </section>
+    </main>
   );
 }

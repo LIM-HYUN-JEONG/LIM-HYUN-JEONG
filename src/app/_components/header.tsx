@@ -4,18 +4,12 @@ import { styled as MuiStyled } from '@mui/material/styles';
 import React from 'react';
 import { MenuData } from '../assets/data/const';
 import styled from 'styled-components';
+import Image from 'next/image';
+import GithubIcon from '../assets/images/githubIcon.png';
 
 export default function Header() {
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        width: '100%',
-        height: '70px',
-        borderBottom: '1px solid #DBDBDB',
-      }}
-    >
+    <HeaderWrap>
       <MenuBox>
         {MenuData.map((menu) => {
           return (
@@ -23,7 +17,7 @@ export default function Header() {
               <a
                 href={menu.path}
                 style={{
-                  color: menu.path === 'home' ? 'black' : '#C4C4C4',
+                  color: menu.path === window.location.pathname ? 'black' : '#C4C4C4',
                 }}
               >
                 {menu.name}
@@ -32,12 +26,19 @@ export default function Header() {
           );
         })}
         <Github href="https://github.com/LIM-HYUN-JEONG" target="_blank" rel="noreferrer">
-          <i className="fab fa-github" style={{ fontSize: '1.5rem' }} />
+          <Image src={GithubIcon} alt="githubIcon" className="githubIcon" width={40} height={40} priority />
         </Github>
       </MenuBox>
-    </div>
+    </HeaderWrap>
   );
 }
+const HeaderWrap = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid #dbdbdb;
+`;
 const MenuBox = MuiStyled(Box)(({ theme }) => ({
   display: 'flex',
   width: '100%',
@@ -66,10 +67,4 @@ const MenuBtn = MuiStyled(Button)({
     backgroundColor: '#4B89DC',
   },
 });
-const Github = styled.a`
-  color: 'red';
-  //hover : 마우스를 대면 효과가 생긴다.
-  &:hover {
-    color: '#4B89DC';
-  }
-`;
+const Github = styled.a``;
