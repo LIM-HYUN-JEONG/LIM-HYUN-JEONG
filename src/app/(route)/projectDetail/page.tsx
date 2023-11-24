@@ -1,5 +1,6 @@
 'use client';
 
+import { Suspense } from 'react';
 import PageHeader from '../../_components/pageHeader';
 import data from '../../assets/data/portfoilodata';
 import DetailWrap from './detailWrap';
@@ -12,12 +13,14 @@ export default function Page(match: any) {
 
   return (
     <main>
-      <PageHeader titleBg="projects">
-        It&#39;s <span className="point">{match.params.name}</span>
-      </PageHeader>
-      <section>
-        <DetailWrap project={portfolioInfo[0]} />
-      </section>
+      <Suspense fallback={null}>
+        <PageHeader titleBg="projects">
+          It&#39;s <span className="point">{match.params.name}</span>
+        </PageHeader>
+        <section>
+          <DetailWrap project={portfolioInfo[0]} />
+        </section>
+      </Suspense>
     </main>
   );
 }

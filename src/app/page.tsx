@@ -1,10 +1,14 @@
 //메인페이지!
-import React from 'react';
+'use client';
+
+import React, { Suspense } from 'react';
 // `app/page.tsx` is the UI for the `/` URL
 export default function Home() {
   return (
-    <div>
-      <div>🟥 pages : main 🟥</div>
-    </div>
+    <Suspense fallback={null}>
+      <div>
+        <div>🟥 pages : main </div>
+      </div>
+    </Suspense>
   );
 }
