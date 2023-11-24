@@ -1,27 +1,32 @@
+'use client';
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+import styled from 'styled-components';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { styled as MuiStyled } from '@mui/material/styles';
-import React from 'react';
 import { MenuData } from '../assets/data/const';
-import styled from 'styled-components';
-import Image from 'next/image';
 import GithubIcon from '../assets/images/githubIcon.png';
 
 export default function Header() {
+  const pathname = usePathname();
+
   return (
     <HeaderWrap>
       <MenuBox>
         {MenuData.map((menu) => {
           return (
             <MenuBtn key={menu.id} disableRipple sx={{ textTransform: 'none' }}>
-              <a
+              <Link
                 href={menu.path}
                 style={{
-                  color: menu.path === window.location.pathname ? 'black' : '#C4C4C4',
+                  color: menu.path === pathname ? 'black' : '#C4C4C4',
                 }}
               >
                 {menu.name}
-              </a>
+              </Link>
             </MenuBtn>
           );
         })}
