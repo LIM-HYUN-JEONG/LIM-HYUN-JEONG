@@ -6,12 +6,13 @@ import Heading from '../../../../utils/heading';
 import SkillsWrap from './skillsWrap';
 import ExperienceWrap from './experienceWrap';
 import PageHeader from '../../../_components/pageHeader';
+import { AbsolDiv } from '@/src/app/_components/common';
 
 interface AboutProps {}
 
 const About: React.FC<AboutProps> = () => {
   return (
-    <div className="about">
+    <AbsolDiv className="about">
       <StyledSkills>
         <PageHeader titleBg="Experience">
           About <span className="point">Me</span>
@@ -27,7 +28,7 @@ const About: React.FC<AboutProps> = () => {
           <SkillsWrap />
         </section>
       </StyledSkills>
-    </div>
+    </AbsolDiv>
   );
 };
 

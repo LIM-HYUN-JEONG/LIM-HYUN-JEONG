@@ -2,6 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import data from '../../assets/data/blogdata';
+import PageHeader from '../../_components/pageHeader';
 
 export default function BlogWrap() {
   const blogList = data.blogList.map((list, idx) => (
@@ -20,15 +21,20 @@ export default function BlogWrap() {
   ));
 
   return (
-    <StyledBlogWrap>
-      <ul>{blogList}</ul>
-      <div className="more">
-        {/* eslint-disable-next-line react/jsx-no-target-blank */}
-        <a href="https://i-do-love-me.tistory.com/" target="_blank">
-          MORE POST
-        </a>
-      </div>
-    </StyledBlogWrap>
+    <>
+      <PageHeader titleBg="Blog">
+        My <span className="point">Blog</span>
+      </PageHeader>
+      <StyledBlogWrap>
+        <ul>{blogList}</ul>
+        <div className="more">
+          {/* eslint-disable-next-line react/jsx-no-target-blank */}
+          <a href="https://i-do-love-me.tistory.com/" target="_blank">
+            MORE POST
+          </a>
+        </div>
+      </StyledBlogWrap>
+    </>
   );
 }
 

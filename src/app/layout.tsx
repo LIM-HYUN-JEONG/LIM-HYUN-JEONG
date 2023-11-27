@@ -11,7 +11,8 @@ import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { getRandomInt } from '../utils/random';
 import * as THREE from 'three';
-import Star from './(route)/about/_components/star';
+import Star from './_components/star';
+import Text from './(route)/about/_components/text';
 //export const metadata: Metadata = {
 // title: {
 // default: '임현정 블로그',
@@ -48,25 +49,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         {hasMounted && (
           <ThemeProvider theme={theme}>
-            <div style={{ width: '100vw', height: '100vh' }}>
-              <GlobalStyle />
-              <Header />
-              <main>
-                <Canvas
-                  camera={{
-                    position: [10000, 10000, 10000],
-                    rotation: [-0.5, 0, 0],
-                    far: 100000,
-                  }}
-                >
-                  <color attach="background" args={['#000']} />
-                  <ambientLight color={'#fff'} intensity={5} />
-                  <OrbitControls />
-                  {genBackgroundStars()}
-                </Canvas>
-                {children}
-              </main>
-            </div>
+            <GlobalStyle />
+            <Header />
+            <main style={{ width: '100vw', height: '100vh' }}>
+              <Canvas
+                camera={{
+                  position: [10000, 10000, 10000],
+                  rotation: [-0.5, 0, 0],
+                  far: 100000,
+                }}
+              >
+                <color attach="background" args={['#000']} />
+                <ambientLight color={'#fff'} intensity={5} />
+                <OrbitControls />
+                {genBackgroundStars()}
+              </Canvas>
+              {children}
+            </main>
           </ThemeProvider>
         )}
       </body>
