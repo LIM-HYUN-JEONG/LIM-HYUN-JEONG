@@ -1,27 +1,50 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import styled from 'styled-components';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import { styled as MuiStyled } from '@mui/material/styles';
 import { MenuData } from '../assets/data/const';
 import GithubIcon from '../assets/images/githubIcon.png';
+import { Menu, MenuItem, Button, Box } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 
-export default function Header() {
+export default function MobileHeader() {
   const pathname = usePathname();
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <HeaderWrap>
-      <MenuBox>
+      <HamburgerBtn onClick={handleClick}>
+        <MenuIcon style={{ fontSize: '2.2rem', color: 'white' }} />
+      </HamburgerBtn>
+
+      <MenuBox
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'left',
+        }}
+        id="mobileMenu"
+      >
         {MenuData.map((menu) => {
           return (
             <MenuBtn
               key={menu.id}
               disableRipple
               sx={{ textTransform: 'none' }}
+              onClick={handleClose}
               style={{
                 backgroundColor: menu.path === pathname ? 'black' : '',
               }}
@@ -44,41 +67,47 @@ export default function Header() {
     </HeaderWrap>
   );
 }
+
 const HeaderWrap = MuiStyled(Box)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'center',
   width: '100%',
   height: '70px',
   borderBottom: '1px solid #dbdbdb',
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.up('sm')]: {
     display: 'none',
   },
 }));
-
-const MenuBox = MuiStyled(Box)(({ theme }) => ({
+const HamburgerBtn = MuiStyled(Button)({
+  width: '100vw',
+  display: 'flex',
+  justifyContent: 'flex-start',
+  paddingLeft: '20px',
+});
+const MenuBox = MuiStyled(Menu)({
   display: 'flex',
   width: '100%',
+  justifyContent: 'flex-end',
+  flexDirection: 'column',
   alignItems: 'center',
-  justifyContent: 'center',
   padding: '0 1rem',
   fontSize: '1rem',
   fontWeight: 700,
+});
 
-  [theme.breakpoints.up('md')]: {
-    width: '65vw',
-    textAlign: 'right',
-  },
-}));
-
-const MenuBtn = MuiStyled(Button)(({ theme }) => ({
+const MenuBtn = MuiStyled(MenuItem)({
   color: '#838383',
   fontSize: '16px',
   fontWeight: '700',
-  margin: '0rem 1.5rem 0rem 1.5rem',
-  padding: '0px 6px 0px 6px',
+  margin: '0rem 1rem',
+  textAlign: 'center',
+  alignItems: 'center',
   ':hover': {
     color: '#0000',
     backgroundColor: 'black', //호버했을때 색상
   },
-}));
-const Github = styled.a``;
+});
+const Github = styled.a`
+  display: flex;
+  justify-content: center;
+`;

@@ -13,6 +13,7 @@ import { getRandomInt } from '../utils/random';
 import * as THREE from 'three';
 import Star from './_components/star';
 import Text from './(route)/about/_components/text';
+import MobileHeader from './_components/mobileHeader';
 //export const metadata: Metadata = {
 // title: {
 // default: '임현정 블로그',
@@ -51,6 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <ThemeProvider theme={theme}>
             <GlobalStyle />
             <Header />
+            <MobileHeader />
             <main style={{ width: '100vw', height: '100vh' }}>
               <Canvas
                 camera={{
