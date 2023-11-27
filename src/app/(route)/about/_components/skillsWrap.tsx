@@ -2,12 +2,14 @@ import React from 'react';
 import data from '../../../assets/data/skilldata';
 import styled from 'styled-components';
 import Heading from '@/src/utils/heading';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 function SkillsWrap() {
   const skillsList = data.skillList.map((list, idx) => (
     <div className="skill-list" key={idx}>
       <Heading level="3" className="skill-label">
-        <i className={list.icon}></i>: {list.label}
+        <FontAwesomeIcon className={list.icon} icon={list.icon as IconProp} />: {list.label}
       </Heading>
 
       <ul className="skill-detail">

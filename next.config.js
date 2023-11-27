@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-module.exports = {
+const nextConfig = {
+  reactStrictMode: true,
+  experimental: {
+    appDir: true,
+  },
   babel: {
     styledComponents: {
       // Enable or disable the displayName generation for styled components.
@@ -38,3 +40,5 @@ module.exports = {
     },
   },
 };
+
+module.exports = nextConfig;
