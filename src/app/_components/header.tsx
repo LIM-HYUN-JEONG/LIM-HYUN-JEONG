@@ -18,11 +18,18 @@ export default function Header() {
       <MenuBox>
         {MenuData.map((menu) => {
           return (
-            <MenuBtn key={menu.id} disableRipple sx={{ textTransform: 'none' }}>
+            <MenuBtn
+              key={menu.id}
+              disableRipple
+              sx={{ textTransform: 'none' }}
+              style={{
+                backgroundColor: menu.path === pathname ? 'black' : '',
+              }}
+            >
               <Link
                 href={menu.path}
                 style={{
-                  color: menu.path === pathname ? 'black' : '#C4C4C4',
+                  color: menu.path === pathname ? 'white' : '#C4C4C4',
                 }}
               >
                 {menu.name}
@@ -63,13 +70,14 @@ const MenuBox = MuiStyled(Box)(({ theme }) => ({
 
 const MenuBtn = MuiStyled(Button)({
   color: '#838383',
+
   fontSize: '16px',
   fontWeight: '700',
   margin: '0rem 1.5rem 0rem 1.5rem',
-  padding: '0px 4px 0px 4px',
+  padding: '0px 6px 0px 6px',
   ':hover': {
     color: '#0000',
-    backgroundColor: '#4B89DC',
+    backgroundColor: 'black', //호버했을때 색상
   },
 });
 const Github = styled.a``;

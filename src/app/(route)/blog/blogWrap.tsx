@@ -97,7 +97,7 @@ const StyledBlogWrap = styled.div`
       display: inline-block;
       padding: 0px 40px;
       border-radius: 26px;
-      background-color: #4b89dc;
+      background-color: black;
       font-size: 15px;
       font-weight: 500;
       color: #fff;
