@@ -3,7 +3,7 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&text=Welcome%20to%20Hyun's%20GitHub%20👋&animation=twinkling&fontSize=35&height=250)
 ---
 # Hello🤚🏻 I'm LIM-HYUN-JEONG
-### My Resume Site : https://lim-hyun-jeong.vercel.app/
+### My Resume Site(~ing) : https://lim-hyun-jeong.vercel.app/
   
 ## 🛠Teck Stack🛠
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/>   
