@@ -2,8 +2,8 @@
   
 ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&text=Welcome%20to%20Hyun's%20GitHub%20👋&animation=twinkling&fontSize=35&height=250)
 ---
-# Hello🤚🏻 I'm LIM-HYUN-JEONG
-### My Resume Site(~ing) : https://lim-hyun-jeong.vercel.app/
+# Hello🤚🏻 I'm IM-HYUN-JEONG
+### My Resume Site(~ing) : https://im-hyun-jeong.vercel.app/
   
 ## 🛠Teck Stack🛠
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/>   
@@ -49,13 +49,13 @@
 
 <hr />
 
-<a href="https://github.com/LIM-HYUN-JEONG">
-  <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FLIM-HYUN-JEONG&count_bg=%23000000&title_bg=%23000000&icon=github.svg&icon_color=%23E7E7E7&title=GitHub&edge_flat=false)"/>
+<a href="https://github.com/IM-HYUN-JEONG">
+  <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FIM-HYUN-JEONG&count_bg=%23000000&title_bg=%23000000&icon=github.svg&icon_color=%23E7E7E7&title=GitHub&edge_flat=false)"/>
 </a> 
 
 <hr />
   
-![LIM-HYUN-JEONG's github stats](https://github-readme-stats.vercel.app/api?username=LIM-HYUN-JEONG&show_icons=true&theme=omni) [![LIM-HYUN-JEONG's github stats](https://github-readme-stats.vercel.app/api/top-langs/?username=LIM-HYUN-JEONG&show_icons=true&hide_border=true&title_color=004386&icon_color=004386&layout=compact&theme=omni)](https://github.com/LIM-HYUN-JEONG)
+![IM-HYUN-JEONG's github stats](https://github-readme-stats.vercel.app/api?username=IM-HYUN-JEONG&show_icons=true&theme=omni) [![IM-HYUN-JEONG's github stats](https://github-readme-stats.vercel.app/api/top-langs/?username=IM-HYUN-JEONG&show_icons=true&hide_border=true&title_color=004386&icon_color=004386&layout=compact&theme=omni)](https://github.com/IM-HYUN-JEONG)
   
   </div>
 </div>
